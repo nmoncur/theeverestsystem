@@ -14,7 +14,12 @@ body, .site {
   margin: 0;
 }
 .site-header {
+  margin: 0 auto;
   padding: 0;
+  width: 98%;
+}
+.site-branding, .site-header-menu, .header-image {
+  margin: 35px 0 0;
 }
 .site-content {
   padding: 0;
@@ -26,6 +31,7 @@ body, .site {
   max-width: none;
 }
 .main-logo img {
+  max-height: 75px;
   max-width: 200px;
   margin: 22px 0 0;
 }
