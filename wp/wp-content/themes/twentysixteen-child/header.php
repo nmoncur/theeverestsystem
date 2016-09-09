@@ -16,7 +16,7 @@
       <div class="row">
         <div class="col-sm-3 text-center">
           <div class="main-logo">
-            <img src="<?php echo get_template_directory_uri() ?>-child/images/logo.png" alt="" />
+            <img src="<?php echo get_template_directory_uri() ?>-child/images/logo.jpg" alt="" />
           </div>
         </div>
         <div class="col-sm-5 col-sm-offset-4">

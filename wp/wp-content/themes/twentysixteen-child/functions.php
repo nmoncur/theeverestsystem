@@ -28,4 +28,22 @@ function fix_input($data) {
   return $data;
 }
 
+function tsc_get_pages($page_name) {
+  global $wpdb;
+
+  $page_row = $wpdb->get_results("
+    SELECT ID, post_name FROM wp_posts
+    WHERE post_name = '$page_name';
+  ");
+
+  $page_id = $page_row[0]->ID;
+
+  $pages = $wpdb->get_results("
+    SELECT ID, post_content, post_title, post_name FROM wp_posts
+    WHERE post_parent = $page_id && post_type <> 'revision'
+    ORDER BY menu_order ASC;
+  ");
+  return $pages;
+}
+
 ?>
